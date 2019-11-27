@@ -98,7 +98,10 @@
                 "$ref": "#/messages/deploy.appDescription"
             },
             "type": "string",
-            "pattern": "^[a-z0-9_]"
+            "pattern": "\\S",
+            "validator": {
+                "v-type": "api-key"
+            }
         }
     },
     "required": ["app-name", "api-key", "registry-region", "registry-namespace", "prod-region", "prod-resource-group", "prod-cluster-name", "prod-cluster-namespace"],
@@ -128,8 +131,7 @@
                 "type": "label",
                 "title": {
                     "$ref": "#/messages/deploy.containerregRegion"
-                },
-                "key": "crr"
+                }
             }, {
                 "type": "label",
                 "title": ""
@@ -137,7 +139,9 @@
                 "type": "label",
                 "title": {
                     "$ref": "#/messages/deploy.containerregns"
-                }
+                },
+                "key": "crr"
+
             }, {
                 "type": "select",
                 "title": {
