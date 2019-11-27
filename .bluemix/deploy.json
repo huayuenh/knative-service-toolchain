@@ -137,6 +137,7 @@
                 "title": ""
             }, {
                 "type": "label",
+                "readonly": false,
                 "title": {
                     "$ref": "#/messages/deploy.containerregns"
                 },
