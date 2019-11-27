@@ -92,6 +92,13 @@
             },
             "type": "string",
             "pattern": "^[a-z0-9_]"
+        },
+        "crr": {
+            "description": {
+                "$ref": "#/messages/deploy.appDescription"
+            },
+            "type": "string",
+            "pattern": "^[a-z0-9_]"
         }
     },
     "required": ["app-name", "api-key", "registry-region", "registry-namespace", "prod-region", "prod-resource-group", "prod-cluster-name", "prod-cluster-namespace"],
@@ -121,7 +128,8 @@
                 "type": "label",
                 "title": {
                     "$ref": "#/messages/deploy.containerregRegion"
-                }
+                },
+                "key": "crr"
             }, {
                 "type": "label",
                 "title": ""
